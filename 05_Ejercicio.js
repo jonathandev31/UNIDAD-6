@@ -112,10 +112,10 @@ if ( cantidadDocenas >= 0 ){
     let valorFinal = valorCompra - descuento;
     
     console.log(`Cantidad de decenas: ${cantidadDocenas}`);
-    console.log(`Valor de cada docena: $${valorDocena}`);
-    console.log(`Valor de la compra: $${valorCompra}`);
-    console.log(`Descuento aplicado: $${descuento}`);
-    console.log(`Valor final de la compra: $${valorFinal}`);
+    console.log(`Valor de cada docena: ${valorDocena}`);
+    console.log(`Valor de la compra: ${valorCompra}`);
+    console.log(`Descuento aplicado: ${descuento}`);
+    console.log(`Valor final de la compra: ${valorFinal}`);
 
 } else console.log("Error");
 
