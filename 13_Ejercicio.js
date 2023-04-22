@@ -29,3 +29,25 @@ console.log(copiaColores)
 
 console.log("-----------------lenght----------------------")
 console.log(colores.length)
+
+// Ejercicio
+
+// Puton 4
+const limite = 100;
+let numeros = [];
+for (let i = 1 ; i <= limite ; i++) {
+    console.log(numeros.push(i));
+}
+// Punto 5
+const limite1 = 100;
+let numeros1 = [];
+for (let i = 2 ; i <= limite1 ; i += 2) {
+    numeros1.push(i);
+}
+console.log (numeros1)
+
+// Punto 6
+
+let numeros2 = [7,2,3];
+
+

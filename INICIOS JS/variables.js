@@ -83,3 +83,61 @@ class Persona {
 
 console.log( Persona);
 console.log(typeof Persona);
+
+const persona = {
+    nom: "Jonathan",
+    ap: "Fernandez",
+    ed: 21,
+    hablar: function () {
+        msj = "hola! Mi nombre es " + this.nom;
+        return msj;
+    }
+}
+
+console.log( persona.hablar());
+console.log(persona.nom);
+
+class Animal {
+    constructor (nombre, genero) {
+        this.nombre = nombre;
+        this.genero = genero;
+    }
+
+    saludar () {
+        msj = "hola! soy un animal y mi nombre es " + this.nombre;
+        return msj;
+    }
+}
+
+const perro =  new Animal("Dara", "Hembra");
+console.log(perro);
+
+class Gato extends Animal {
+    constructor (nombre, genero, color) {
+        super(nombre, genero);
+        this.color = color;
+        this.raza = null;
+    }
+
+    // Sobreescritura de metodod / Polimorfismo
+
+    saludar () {
+        msj = "hola! soy un gato y mi nombre es " + this.nombre + " y mi raza es " + this.raza;
+        return msj;
+    }
+    get getRaza() { // Metodo GET accesor 
+        return this.raza;
+    }
+    set setRaza(raza) {    // Metodo SET modificador
+        this.raza = raza;
+    }
+}
+
+const annie = new Gato ("Annie", "Hembra", "Cafe con negro");
+
+console.log(annie);
+console.log(annie.saludar());
+
+annie.setRaza = "Carey";
+
+console.log(annie.saludar());
