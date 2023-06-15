@@ -27,7 +27,7 @@ const persona={
     edad: 23
 }
 
-const {nombre, apellido, edad}=persona; //deben tener el mismo nombre del la llave del objeto
+const {nombre, apellido, edad}=persona; // Deben tener el mismo nombre del la llave del objeto
 
 console.log(nombre,apellido,edad)
 
