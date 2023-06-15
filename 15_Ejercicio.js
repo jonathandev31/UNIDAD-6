@@ -81,44 +81,41 @@ try {
     }
 
     function suma (numeroUno, nuemroDos){
-        errorTipoNumerico (numeroUno, nuemroDos);
         return numeroUno + nuemroDos;
 
     }
     function resta (numeroUno, nuemroDos){
-        errorTipoNumerico (numeroUno, nuemroDos);
         return numeroUno - nuemroDos;
     }
 
     function division (numeroUno, nuemroDos){
-        errorTipoNumerico (numeroUno, nuemroDos);
         if ( nuemroDos == 0 ) throw new Error ("La division por cero no es posible."); 
         return numeroUno / nuemroDos;
     }
 
     function multiplicacion (numeroUno, nuemroDos){
-        errorTipoNumerico (numeroUno, nuemroDos);
         return numeroUno * nuemroDos;
     }
 
     function potencia (numeroUno, nuemroDos) {
-        errorTipoNumerico (numeroUno, nuemroDos);
         return numeroUno ** nuemroDos;
     }
 
     function raizCuadrada (numeroUno) {
-        errorTipoNumerico (numeroUno, 0);
         if ( numeroUno < 0 ) throw new Error ("No es posible hacer la raiz cuadrada a numero negativos"); 
         return Math.sqrt( numeroUno )
     }
 
 try {
-    console.log (resta (4,"9"));
-    console.log (suma (4,7));
-    console.log (division (4,7));
-    console.log (multiplicacion (4,7))
-    console.log (potencia (4,7));
-    console.log (raizCuadrada (-4));
+    num1 = 1;
+    num2 = 9;
+    console.log (errorTipoNumerico(num1, num2));
+    console.log (resta (num1, num2));
+    console.log (suma (num1, num2));
+    console.log (division (num1, num2));
+    console.log (multiplicacion (num1, num2))
+    console.log (potencia (num1, num2));
+    console.log (raizCuadrada (num1, 0));
 } catch (error) {
     console.log (error);
 }
