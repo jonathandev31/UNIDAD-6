@@ -63,3 +63,26 @@ numeros.forEach(function(num, index){
 console.log("-----------Ejemplo con Arrow functions---------------")
 
 numeros.forEach((num, index)=>console.log(`El elemento ${num} esta en la posicion ${index}`))
+
+// Ejercicio 4
+
+let numeroUno = 2,
+    numeroDos = 1;
+
+const comparar = ( numeroUno, numeroDos ) => numeroUno != numeroDos;  
+
+
+if ( comparar ( numeroUno, numeroDos) ) console.log ( "1" ) ;
+else console.log ( "0" ) ;
+
+// Ejercicio 5
+
+let tiempo = 50; // La variable tiempo sera en segundos, minutos u horas.
+
+const convertirSegundosMinutos = tiempo => tiempo / 60;
+const convertirMinutosHoras = tiempo => tiempo / 60;
+const convertirHorasDias = tiempo => tiempo / 24;
+
+console.log ( tiempo + " segundos son " + convertirSegundosMinutos ( tiempo ) + " minutos." ) ;
+console.log ( tiempo + " minutos son " + convertirMinutosHoras ( tiempo ) + " horas." ) ;
+console.log ( tiempo + " horas son " + convertirHorasDias ( tiempo ) + " dias." ) ;

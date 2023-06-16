@@ -81,8 +81,8 @@ else console.log( "El email " + email + " no es corecto" );
 
 // Ejercicio 6
 
-let validadorContraseñas = /()/;
+let validadorContraseñas = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/;
 let contraseña = "Yuli3119";
 
-if ( correoExpReg.test(contraseña) ) console.log( "La contraseña " + contraseña + " es correcta");
+if ( validadorContraseñas.test(contraseña) ) console.log( "La contraseña " + contraseña + " es correcta");
 else console.log( "La contraseña " + contraseña + " no es corecta" );
