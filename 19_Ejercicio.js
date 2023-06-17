@@ -32,47 +32,75 @@ console.log ( typeof ( jsonPersona ) );
 // Ejercicio 4 
 // Punto a 
 
-let usuarios = {
-    datosPersonales : [
-        {
-            nombre: "Jonathan", 
-            apellido: "Fernandez",
-            correo: "jonathan.fernadez31@gmail.com", 
-            telefono: "3245413064", 
-            nacionalidad: "Colombia"
-        },
-        {
-            nombre: "Andres", 
-            apellido: "Otero",
-            correo: "andres.otero03@gmail.com", 
-            telefono: "39182738912", 
-            nacionalidad: "Colombia"
-        },
-        {
-            nombre: "Nicole", 
-            apellido: "Moreno",
-            correo: "nicolemoreno@gmail.com", 
-            telefono: "3128391832", 
-            nacionalidad: "Colombia"
-        },
-        {
-            nombre: "Karen", 
-            apellido: "Vargas",
-            correo: "karenvargas@gmail.com", 
-            telefono: "31977823874", 
-            nacionalidad: "Colombia"
-        },
-        {
-            nombre: "Yuli", 
-            apellido: "Rengifo",
-            correo: "yulirengifo@gmail.com", 
-            telefono: "31308129881", 
-            nacionalidad: "Colombia"
-        }
-    ]
-}
+let usuarios = [
+    {
+        nombre: "Jonathan", 
+        apellido: "Fernandez",
+        correo: "jonathan.fernadez31@gmail.com", 
+        telefono: "3245413064", 
+        nacionalidad: "Colombia"
+    },
+    {
+        nombre: "Andres", 
+        apellido: "Otero",
+        correo: "andres.otero03@gmail.com", 
+        telefono: "39182738912", 
+        nacionalidad: "Colombia"
+    },
+    {
+        nombre: "Nicole", 
+        apellido: "Moreno",
+        correo: "nicolemoreno@gmail.com", 
+        telefono: "3128391832", 
+        nacionalidad: "Colombia"
+    },
+    {
+        nombre: "Karen", 
+        apellido: "Vargas",
+        correo: "karenvargas@gmail.com", 
+        telefono: "31977823874", 
+        nacionalidad: "Colombia"
+    },
+    {
+        nombre: "Yuli", 
+        apellido: "Rengifo",
+        correo: "yulirengifo@gmail.com", 
+        telefono: "31308129881", 
+        nacionalidad: "Colombia"
+    }
 
-const jsonUsuarios = JSON.stringify ( usuarios );
+];
 
-console.log ( usuarios );
-console.log ( jsonUsuarios );
+usuarios.forEach ( ( i )  => {
+console.log ( JSON.stringify ( i ) );
+console.log ( i );
+});
+
+const peliculas = `{ "peliculas": 
+[
+    {
+        "nombre": "Gigantes de Acero",
+        "genero": "Ciencia Ficcion",
+        "añoEstreno": "2001",
+        "director": "Carlos"
+    },
+    {
+        "nombre": "El Castillo Vagabundo",
+        "genero": "Anime",
+        "añoEstreno": "1983",
+        "director": "Studio Guibli"
+    },
+    {
+        "nombre": "Osaki 8",
+        "genero": "Accion",
+        "añoEstreno": "2013",
+        "director": "Juan"
+    }
+]
+}`;
+let objPeliculas = JSON.parse( peliculas );
+
+console.log ( peliculas );
+
+for ( let i = 0 ; i < objPeliculas.peliculas.length ; i++ ) 
+    console.log ( objPeliculas.peliculas [ i ] );
